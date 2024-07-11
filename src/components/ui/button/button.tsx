@@ -7,7 +7,7 @@ import s from './button.module.scss'
 export type Props<T extends ElementType = 'button'> = {
   as?: T
   fullWidth?: boolean
-  variant?: 'outlined' | 'primary' | 'secondary'
+  variant?: 'ghost' | 'outlined' | 'primary' | 'secondary'
 } & ComponentPropsWithoutRef<T>
 
 export const Button = <T extends ElementType = 'button'>({
