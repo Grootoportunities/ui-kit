@@ -1,18 +1,3 @@
-//.checkboxRoot {
-//  background-color: var(--color-light-100);
-//  height: 18px;
-//  width: 18px;
-//  border-radius: 2px;
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//}
-//
-//.checkboxIndicator {
-//  color: var(--color-dark-900);
-//  display: flex;
-//}
-
 .container {
   display: flex;
   align-items: center;
@@ -70,4 +55,37 @@
   //&:active:not(.disabled) {
   //  background-color: var(--color-bg-primary-active);
   //}
+}
+
+.root {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: var(--color-bg-primary);
+  border: 2px solid var(--color-border-secondary);
+  border-radius: 2px;
+
+  &:focus {
+    background-color: var(--color-bg-focus);
+  }
+
+  &:disabled {
+    cursor: initial;
+    border-color: var(--color-checkbox-disabled);
+  }
+
+  &[data-state='checked']:disabled {
+    background-color: var(--color-checkbox-disabled);
+  }
+}
+
+.indicator {
+  width: 24px;
+  height: 24px;
 }
